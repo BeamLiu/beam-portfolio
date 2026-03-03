@@ -18,6 +18,8 @@ const resources = {
             "sections": {
                 "values": "核心竞争力",
                 "valuesSub": "售前转化、技术架构与团队管理的全面支撑体系",
+                "aiShows": "AI 产品与技术探索",
+                "aiShowsSub": "AI 结对编程、氛围编程与前沿技术的实践探索。",
                 "products": "AI 产品与技术探索",
                 "productsSub": "AI 结对编程、氛围编程与前沿技术的实践探索。",
                 "projects": "标杆项目与商业案例",
@@ -57,6 +59,8 @@ const resources = {
             "sections": {
                 "values": "Core Competencies",
                 "valuesSub": "Full-stack support across presales, architecture, and team management.",
+                "aiShows": "AI Products & Tech Explorations",
+                "aiShowsSub": "Cutting-edge AI pair programming, ambient coding, and emerging tech practices.",
                 "products": "AI Products & Tech Explorations",
                 "productsSub": "Cutting-edge AI pair programming, ambient coding, and emerging tech practices.",
                 "projects": "Case Studies & Ventures",

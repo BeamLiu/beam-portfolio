@@ -47,7 +47,9 @@ export interface Project {
   media?: {
     image?: string;
     video?: string;
+    videos?: Array<{ title: string; url: string }>;
     pdf?: string;
+    pdfs?: Array<{ title: string; url: string }>;
     github?: string;
   };
 }

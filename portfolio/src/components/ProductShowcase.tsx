@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { aiShows, geekProjects } from '../data/portfolio';
+import { MediaPlayer } from './MediaPlayer';
+import type { Project } from '../types/portfolio';
 
 export const ProductShowcase = () => {
     const { t } = useTranslation();
     const allProducts = [...aiShows, ...geekProjects];
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     return (
         <section className="py-24 px-4 bg-background max-w-7xl mx-auto w-full">
@@ -18,16 +22,16 @@ export const ProductShowcase = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {allProducts.map((product) => (
-                    <div 
-                        key={product.id} 
+                    <div
+                        key={product.id}
                         className="bg-surface border border-border rounded-xl overflow-hidden hover:border-accent/40 hover:shadow-xl transition-all group"
                     >
                         {/* Image/Visual Area */}
                         <div className="aspect-video bg-gradient-to-br from-accent/5 via-surface to-background flex items-center justify-center relative overflow-hidden border-b border-border">
                             {product.media?.image ? (
-                                <img 
-                                    src={product.media.image} 
-                                    alt={product.name} 
+                                <img
+                                    src={product.media.image}
+                                    alt={product.name}
                                     className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-300"
                                 />
                             ) : (
@@ -64,8 +68,8 @@ export const ProductShowcase = () => {
                             {/* Tags */}
                             <div className="flex flex-wrap gap-1.5 mb-4">
                                 {product.tags.slice(0, 4).map((tag) => (
-                                    <span 
-                                        key={tag} 
+                                    <span
+                                        key={tag}
                                         className="px-2 py-0.5 bg-background border border-border rounded text-xs text-text-secondary font-mono"
                                     >
                                         {tag}
@@ -75,23 +79,24 @@ export const ProductShowcase = () => {
 
                             {/* Action Buttons */}
                             <div className="flex flex-wrap gap-2 pt-4 border-t border-border">
-                                {product.media?.video && (
-                                    <a 
-                                        href={product.media.video} 
-                                        target="_blank" 
-                                        rel="noreferrer"
+                                {(product.media?.video || (product.media?.videos && product.media.videos.length > 0)) && (
+                                    <button
+                                        onClick={() => setSelectedProject(product)}
                                         className="flex-1 text-center px-3 py-2 bg-accent text-white rounded-lg text-xs font-medium hover:bg-accent/90 transition-colors flex items-center justify-center gap-1"
                                     >
                                         <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                             <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                                         </svg>
                                         {t('labels.playVideo')}
-                                    </a>
+                                        {product.media?.videos && product.media.videos.length > 1 && (
+                                            <span className="ml-1">({product.media.videos.length})</span>
+                                        )}
+                                    </button>
                                 )}
                                 {product.media?.github && (
-                                    <a 
-                                        href={product.media.github} 
-                                        target="_blank" 
+                                    <a
+                                        href={product.media.github}
+                                        target="_blank"
                                         rel="noreferrer"
                                         className="px-3 py-2 border border-border rounded-lg text-xs font-medium hover:bg-background hover:border-accent/40 transition-colors flex items-center justify-center"
                                         title="GitHub"
@@ -101,24 +106,54 @@ export const ProductShowcase = () => {
                                         </svg>
                                     </a>
                                 )}
-                                {product.media?.pdf && (
-                                    <a 
-                                        href={product.media.pdf} 
-                                        target="_blank" 
-                                        rel="noreferrer"
-                                        className="px-3 py-2 border border-border rounded-lg text-xs font-medium hover:bg-background hover:border-accent/40 transition-colors flex items-center justify-center"
+                                {(product.media?.pdf || (product.media?.pdfs && product.media.pdfs.length > 0)) && (
+                                    <button
+                                        onClick={() => setSelectedProject(product)}
+                                        className="px-3 py-2 border border-border rounded-lg text-xs font-medium hover:bg-background hover:border-accent/40 transition-colors flex items-center justify-center gap-1"
                                         title="Document"
                                     >
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                         </svg>
-                                    </a>
+                                        {product.media?.pdfs && product.media.pdfs.length > 1 && (
+                                            <span className="ml-1 text-xs">({product.media.pdfs.length})</span>
+                                        )}
+                                    </button>
                                 )}
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
+
+            {/* Modal */}
+            {selectedProject && (
+                <div
+                    className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+                    onClick={() => setSelectedProject(null)}
+                >
+                    <div
+                        className="bg-surface border border-border rounded-xl max-w-5xl w-full p-6 relative"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            onClick={() => setSelectedProject(null)}
+                            className="absolute top-4 right-4 p-2 hover:bg-background rounded-lg transition-colors z-10"
+                        >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        <MediaPlayer
+                            videos={selectedProject.media?.videos || (selectedProject.media?.video ? [{ title: t('labels.playVideo'), url: selectedProject.media.video }] : undefined)}
+                            pdfs={selectedProject.media?.pdfs || (selectedProject.media?.pdf ? [{ title: t('labels.viewDoc'), url: selectedProject.media.pdf }] : undefined)}
+                            image={selectedProject.media?.image}
+                            github={selectedProject.media?.github}
+                        />
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

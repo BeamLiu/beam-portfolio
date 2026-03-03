@@ -124,7 +124,7 @@ export const projects: Project[] = [
 export const aiShows: Project[] = [
     {
         id: "emop3",
-        name: "EMOP 3.0 平台端到端重构",
+        name: "EMOP 3.0 平台端到端构建",
         year: "2024-2025",
         role: "CTO / Chief Architect",
         description: "AI 结对编程完成工业互联网平台的全栈重构，从架构设计到前后端实现。10个月完成平台核心服务的完整重构与稳定迭代。",
@@ -132,9 +132,17 @@ export const aiShows: Project[] = [
         impact: "实现了从 1.0 到 3.0 的完整技术演进，大幅提升了平台的可扩展性和稳定性，为千万级项目落地提供了坚实的技术底座。",
         tags: ["AI结对编程", "全栈开发", "架构设计", "云原生"],
         media: {
-            video: "/videos/emop3-demo.mp4",
             image: "/images/emop3-1.png",
-            pdf: "/ppt/emop3-presales.pdf"
+            videos: [
+                { title: "平台演示", url: "http://www.eingsoft.com:81/public/emop3-demo.mp4" },
+                { title: "CAD集成演示", url: "http://www.eingsoft.com:81/public/creo-integration.mp4" },
+                { title: "对象图谱演示", url: "http://www.eingsoft.com:81/public/object_network.mp4" },
+                { title: "MCP演示", url: "http://www.eingsoft.com:81/public/mcp.mp4" }
+            ],
+            pdfs: [
+                { title: "EMOP3介绍", url: "http://www.eingsoft.com:81/public/emop3.0_introduce.pdf" },
+            ],
+            github: "https://github.com/BeamLiu/emop3-dev-portal/tree/main"
         }
     },
     {
@@ -143,12 +151,14 @@ export const aiShows: Project[] = [
         year: "2025",
         role: "Developer",
         description: "AI 辅助开发的 CAD 文件格式转换工具，解决工业设计软件互操作性问题。针对制造业图纸痛点开发的轻量化与高精度 CAD 转换服务。",
-        challenges: "支持 UG 到 CATIA 格式转换，保持几何精度和特征完整性，B-REP 边界表示法数据的无损解析与面片化误差控制，批量处理能力，AI 辅助算法优化。",
+        challenges: "支持 UG 到 CATIA 格式转换，保持几何精度和特征完整性，B-REP 边界表示法数据的无损解析与面片化误差控制，批量处理能力。",
         impact: "有效提升了工程师图形渲染性能与读取效率，解决了不同 CAD 系统之间的数据互通难题。",
         tags: ["AI辅助", "CAD", "工业软件", "算法"],
         media: {
-            video: "/videos/cad-converter-demo.mp4",
-            image: "/images/cad-converter.png"
+            image: "/images/cad-converter.png",
+            videos: [
+                { title: "转换效果演示", url: "/videos/cad-converter-demo.mp4" },
+            ]
         }
     },
     {
@@ -161,8 +171,14 @@ export const aiShows: Project[] = [
         impact: "帮助无数学习者在家自主实现琴童陪练纠错，通过技术极客项目实现教育普惠，家庭场景实际应用验证。",
         tags: ["氛围编程", "AI模型", "全栈", "音乐教育"],
         media: {
-            video: "/videos/stylemidi-demo.mp4",
             image: "/images/stylemidi-1.png",
+            videos: [
+                { title: "产品演示", url: "/videos/stylemidi-demo.mp4" },
+                { title: "使用教程", url: "/videos/stylemidi-tutorial.mp4" }
+            ],
+            pdfs: [
+                { title: "产品介绍", url: "/ppt/stylemidi-intro.pdf" }
+            ],
             github: "https://github.com/beamliu/stylemidi"
         }
     },
