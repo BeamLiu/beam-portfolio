@@ -33,6 +33,7 @@ export interface PersonalData {
     degree: string;
     year: string;
   };
+  languages?: string;
 }
 
 export interface Project {

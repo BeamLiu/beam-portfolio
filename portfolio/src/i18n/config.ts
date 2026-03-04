@@ -12,24 +12,22 @@ const resources = {
                 "viewResume": "查看简历 (PDF)",
                 "yearsExp": "年研发与管理经验",
                 "patents": "项核心技术专利",
-                "volume": "级重型平台操盘手",
+                "volume": "工业软件产品营收",
                 "team": "人敏捷工程师团队",
             },
             "sections": {
                 "values": "核心竞争力",
                 "valuesSub": "售前转化、技术架构与团队管理的全面支撑体系",
-                "aiShows": "AI 产品与技术探索",
-                "aiShowsSub": "AI 结对编程、氛围编程与前沿技术的实践探索。",
                 "products": "AI 产品与技术探索",
                 "productsSub": "AI 结对编程、氛围编程与前沿技术的实践探索。",
                 "projects": "标杆项目与商业案例",
                 "projectsSub": "千万级大型企业服务落地验证。",
                 "career": "职业轨迹与成就",
                 "careerSub": "高管级技术履历，推动全栈业务增长。",
-                "patents": "硬核专利",
+                "patents": "技术专利",
                 "patentsSub": "深入底层的技术突破与长效资产沉淀。",
                 "certifications": "专业认证",
-                "certificationsSub": "Google AI/ML 与西门子 IIoT 专业认证。",
+                "certificationsSub": "Google AI领域、西门子及达索工业软件领域能力认证。",
                 "tech": "技术雷达图谱",
                 "beyond": "认知与视野 (Beyond Code)"
             },
@@ -40,7 +38,8 @@ const resources = {
                 "challenge": "业务挑战/背景",
                 "impact": "商业收益/成果",
                 "readingHours": "+ 阅读时长",
-                "edu": "教育背景"
+                "edu": "教育背景",
+                "languages": "语言能力",
             }
         }
     },
@@ -81,7 +80,14 @@ const resources = {
                 "challenge": "Business Challenge / Context",
                 "impact": "Commercial Impact / Results",
                 "readingHours": "+ Reading Hours",
-                "edu": "Education"
+                "edu": "Education",
+                "languages": "Language Proficiency",
+                "chinese": "Chinese",
+                "english": "English",
+                "listening": "Listening",
+                "speaking": "Speaking",
+                "reading": "Reading",
+                "writing": "Writing"
             }
         }
     }

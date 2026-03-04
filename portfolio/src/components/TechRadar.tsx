@@ -41,6 +41,15 @@ export const TechRadar = () => {
                             </div>
                         )}
                     </div>
+
+                    <div className="mt-12">
+                        <h3 className="text-lg font-bold text-text-primary mb-3">{t('labels.languages')}</h3>
+                        {personalData.languages && (
+                            <div className="p-4 rounded-xl bg-surface border border-border">
+                                <div className="text-sm text-text-secondary">{personalData.languages}</div>
+                            </div>
+                        )}
+                    </div>
                 </div>
 
                 {/* Right Side: Beyond Code */}

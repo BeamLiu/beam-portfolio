@@ -7,8 +7,8 @@ const values = [
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
             </svg>
         ),
-        title: "制造业全栈理解",
-        desc: "从 PLM 到 MOM/MES 再到 IIoT，19 年经验覆盖研发、生产、供应链全链路。"
+        title: "制造业数字化全栈理解",
+        desc: "从 PLM 到 MOM/MES 再到 IIoT，大量制造业头部客户数字化实践。"
     },
     {
         icon: (
@@ -17,7 +17,7 @@ const values = [
             </svg>
         ),
         title: "AI 技术实践者",
-        desc: "Google ML/DL 双认证，大模型微调、小模型训练、传统深度学习训练、数据准备到工业场景落地的完整实践，Vibe Coding周边的大量实践。"
+        desc: "谷歌及谷歌云AI领域双认证，大模型微调、小模型训练、传统机器学习、数据准备到工业场景落地的完整实践，Vibe Coding周边的大量实践。"
     },
     {
         icon: (
@@ -26,7 +26,7 @@ const values = [
             </svg>
         ),
         title: "售前与商业转化",
-        desc: "西门子 IIoT 售前认证，懂技术更懂客户，1 小时拿下 700 万订单。"
+        desc: "西门子、达索工业软件领域售前售后认证，懂技术更懂客户，1 小时拿下 700 万订单。"
     },
     {
         icon: (
@@ -34,8 +34,8 @@ const values = [
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
         ),
-        title: "敏捷团队管理",
-        desc: "微服务架构先行者，带领 70+ 人团队，注重开发者体验与氛围编程。"
+        title: "敏捷团队AI化",
+        desc: "微服务架构先行者，曾带领 70+ 人敏捷团队，AI时代微型团队全面AI化。"
     }
 ];
 

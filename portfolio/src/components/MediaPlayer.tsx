@@ -1,17 +1,20 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
 interface MediaPlayerProps {
     videos?: Array<{ title: string; url: string }>;
     pdfs?: Array<{ title: string; url: string }>;
     image?: string;
     github?: string;
+    initialMediaType?: 'video' | 'pdf';
 }
 
-export const MediaPlayer = ({ videos, pdfs, image, github }: MediaPlayerProps) => {
-    const { t } = useTranslation();
-    const [selectedVideo, setSelectedVideo] = useState<string | null>(videos?.[0]?.url || null);
-    const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
+export const MediaPlayer = ({ videos, pdfs, image, github, initialMediaType = 'video' }: MediaPlayerProps) => {
+    const [selectedVideo, setSelectedVideo] = useState<string | null>(
+        initialMediaType === 'video' ? (videos?.[0]?.url || null) : null
+    );
+    const [selectedPdf, setSelectedPdf] = useState<string | null>(
+        initialMediaType === 'pdf' ? (pdfs?.[0]?.url || null) : null
+    );
 
     return (
         <div className="w-full space-y-4">
@@ -21,6 +24,7 @@ export const MediaPlayer = ({ videos, pdfs, image, github }: MediaPlayerProps) =
                     <video
                         key={selectedVideo}
                         controls
+                        autoPlay
                         className="w-full h-full"
                         src={selectedVideo}
                     >
