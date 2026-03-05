@@ -29,6 +29,7 @@ export const AIShowcase = () => {
                                 pdfs={project.media?.pdfs}
                                 image={project.media?.image}
                                 github={project.media?.github}
+                                weblink={project.media?.weblink}
                             />
                         </div>
 

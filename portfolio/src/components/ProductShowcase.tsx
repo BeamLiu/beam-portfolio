@@ -110,6 +110,19 @@ export const ProductShowcase = () => {
                                         </svg>
                                     </a>
                                 )}
+                                {product.media?.weblink && (
+                                    <a
+                                        href={product.media.weblink}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="px-3 py-2 border border-border rounded-lg text-xs font-medium hover:bg-background hover:border-accent/40 transition-colors flex items-center justify-center gap-1"
+                                        title="在线访问"
+                                    >
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                        </svg>
+                                    </a>
+                                )}
                                 {(product.media?.pdf || (product.media?.pdfs && product.media.pdfs.length > 0)) && (
                                     <button
                                         onClick={() => {
@@ -157,6 +170,7 @@ export const ProductShowcase = () => {
                             pdfs={selectedProject.media?.pdfs || (selectedProject.media?.pdf ? [{ title: t('labels.viewDoc'), url: selectedProject.media.pdf }] : undefined)}
                             image={selectedProject.media?.image}
                             github={selectedProject.media?.github}
+                            weblink={selectedProject.media?.weblink}
                             initialMediaType={initialMediaType}
                         />
                     </div>

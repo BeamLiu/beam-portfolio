@@ -52,6 +52,7 @@ export interface Project {
     pdf?: string;
     pdfs?: Array<{ title: string; url: string }>;
     github?: string;
+    weblink?: string;
   };
 }
 

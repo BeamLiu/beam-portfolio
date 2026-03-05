@@ -1,7 +1,7 @@
 import type { PersonalData, Project, Patent, Experience, Certification } from '../types/portfolio';
 
 export const personalData: PersonalData = {
-    name: "Beam Liu",
+    name: "刘圣质(Beam Liu)",
     fullName: "Shengzhi Liu",
     title: "AI Explorer, Presales Expert",
     slogan: "链接前沿 AI 与工业数字化的工程师 / 管理者",
@@ -203,7 +203,8 @@ export const aiShows: Project[] = [
             videos: [
                 { title: "产品演示", url: "http://www.eingsoft.com:81/public/style_midi.mp4" },
             ],
-            github: "https://github.com/BeamLiu/codesnippet/tree/main/build_llm/style_midi"
+            github: "https://github.com/BeamLiu/codesnippet/tree/main/build_llm/style_midi",
+            weblink: "http://8.134.38.136/stylemidi/"
         }
     },
     {

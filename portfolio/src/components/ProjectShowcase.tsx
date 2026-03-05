@@ -136,6 +136,7 @@ export const ProjectShowcase = () => {
                             pdfs={selectedProject.media?.pdfs || (selectedProject.media?.pdf ? [{ title: t('labels.viewDoc'), url: selectedProject.media.pdf }] : undefined)}
                             image={selectedProject.media?.image}
                             github={selectedProject.media?.github}
+                            weblink={selectedProject.media?.weblink}
                             initialMediaType={initialMediaType}
                         />
                     </div>

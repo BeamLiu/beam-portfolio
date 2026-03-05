@@ -20,7 +20,7 @@ export const HeroSection = () => {
                     )}
                 </div>
 
-                <h1 className="text-5xl md:text-7xl font-bold text-text-primary mb-6">
+                <h1 className="text-5xl md:text-4xl font-bold text-text-primary mb-6">
                     {personalData.name}
                 </h1>
 
@@ -53,7 +53,7 @@ export const HeroSection = () => {
                 </div>
 
                 {/* Quick Links / Contact */}
-                <div className="mt-12 flex flex-wrap justify-center gap-4">
+                {/* <div className="mt-12 flex flex-wrap justify-center gap-4">
                     {personalData.contact.resumePDF && (
                         <a href={personalData.contact.resumePDF} target="_blank" rel="noreferrer" className="px-6 py-2 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition-colors">
                             {t('hero.viewResume')}
@@ -69,7 +69,7 @@ export const HeroSection = () => {
                             LinkedIn
                         </a>
                     )}
-                </div>
+                </div> */}
             </div>
         </section>
     );
