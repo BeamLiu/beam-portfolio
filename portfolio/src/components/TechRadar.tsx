@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { personalData } from '../data/portfolio';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 const techCategories = [
     { name: "Backend / Microservices", tags: ["Python", "Java", "Kubernetes", "Spring Boot", "FastAPI"] },
@@ -9,6 +9,7 @@ const techCategories = [
 ];
 
 export const TechRadar = () => {
+    const { personalData } = usePortfolioData();
     const { t } = useTranslation();
     return (
         <section className="py-24 px-4 bg-background max-w-7xl mx-auto w-full border-t border-border/50">
@@ -63,34 +64,34 @@ export const TechRadar = () => {
                         </div>
 
                         <p className="text-text-primary leading-relaxed mb-6 font-medium">
-                            精读 <span className="text-accent font-bold">{personalData.interests.books}+</span> 本专业书籍，跨界建立体系化认知底座。
+                            {t('beyondCode.readDesc1')}<span className="text-accent font-bold">{personalData.interests.books}+</span>{t('beyondCode.readDesc2')}
                         </p>
 
                         <div className="space-y-4">
                             <div className="flex flex-col text-sm border-b border-border/50 pb-3">
                                 <div className="flex justify-between items-center mb-1">
-                                    <span className="text-text-primary font-bold">技术架构与 AI</span>
+                                    <span className="text-text-primary font-bold">{t('beyondCode.arch')}</span>
                                     <span className="font-mono text-text-secondary">35%</span>
                                 </div>
                                 <span className="text-text-secondary/70 italic">{personalData.interests.bookList?.technical}</span>
                             </div>
                             <div className="flex flex-col text-sm border-b border-border/50 pb-3">
                                 <div className="flex justify-between items-center mb-1">
-                                    <span className="text-text-primary font-bold">经管社科与商业</span>
+                                    <span className="text-text-primary font-bold">{t('beyondCode.mgmt')}</span>
                                     <span className="font-mono text-text-secondary">30%</span>
                                 </div>
                                 <span className="text-text-secondary/70 italic">{personalData.interests.bookList?.management}</span>
                             </div>
                             <div className="flex flex-col text-sm border-b border-border/50 pb-3">
                                 <div className="flex justify-between items-center mb-1">
-                                    <span className="text-text-primary font-bold">哲学与思想史</span>
+                                    <span className="text-text-primary font-bold">{t('beyondCode.phil')}</span>
                                     <span className="font-mono text-text-secondary">20%</span>
                                 </div>
                                 <span className="text-text-secondary/70 italic">{personalData.interests.bookList?.philosophy}</span>
                             </div>
                             <div className="flex flex-col text-sm pb-1">
                                 <div className="flex justify-between items-center mb-1">
-                                    <span className="text-text-primary font-bold">天文与硬科幻</span>
+                                    <span className="text-text-primary font-bold">{t('beyondCode.scifi')}</span>
                                     <span className="font-mono text-text-secondary">15%</span>
                                 </div>
                                 <span className="text-text-secondary/70 italic">{personalData.interests.bookList?.scifi}</span>

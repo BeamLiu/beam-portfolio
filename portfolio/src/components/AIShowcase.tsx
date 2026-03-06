@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import { aiShows } from '../data/portfolio';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 import { MediaPlayer } from './MediaPlayer';
 
 export const AIShowcase = () => {
+    const { aiShows } = usePortfolioData();
     const { t } = useTranslation();
 
     return (

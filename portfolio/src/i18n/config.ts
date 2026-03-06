@@ -40,6 +40,14 @@ const resources = {
                 "readingHours": "+ 阅读时长",
                 "edu": "教育背景",
                 "languages": "语言能力",
+            },
+            "beyondCode": {
+                "readDesc1": "精读 ",
+                "readDesc2": " 本专业书籍，跨界建立体系化认知底座。",
+                "arch": "技术架构与 AI",
+                "mgmt": "经管社科与商业",
+                "phil": "哲学与思想史",
+                "scifi": "天文与硬科幻"
             }
         }
     },
@@ -88,6 +96,14 @@ const resources = {
                 "speaking": "Speaking",
                 "reading": "Reading",
                 "writing": "Writing"
+            },
+            "beyondCode": {
+                "readDesc1": "Deeply read ",
+                "readDesc2": " professional books, building a systematic cross-disciplinary cognitive foundation.",
+                "arch": "Tech Architecture & AI",
+                "mgmt": "Management & Business",
+                "phil": "Philosophy & History",
+                "scifi": "Astronomy & Sci-Fi"
             }
         }
     }

@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import { patents } from '../data/portfolio';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 export const PatentsTable = () => {
+    const { patents } = usePortfolioData();
     const { t } = useTranslation();
     return (
         <section className="py-24 px-4 bg-surface max-w-5xl mx-auto w-full">

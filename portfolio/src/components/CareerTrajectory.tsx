@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import { experiences } from '../data/portfolio';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 export const CareerTrajectory = () => {
+    const { experiences } = usePortfolioData();
     const { t } = useTranslation();
     return (
         <section className="py-24 px-4 bg-background max-w-7xl mx-auto w-full border-t border-border/50">

@@ -80,7 +80,7 @@ function App() {
           <div className="text-accent/60 mb-2">user@beam-portfolio:~$ cat whoami.txt</div>
           <div className="text-text-primary font-medium">&gt; CTO, AI Explorer, Presales Expert.</div>
         </div>
-        <p className="text-sm text-text-secondary/60">© {new Date().getFullYear()} LiuShengZhi(Beam Liu) Portfolio. Designed for "AI + Manufacturing".</p>
+        <p className="text-sm text-text-secondary/60">© {new Date().getFullYear()} LiuShengZhi(Beam Liu) Portfolio. Designed for "Manufacturing + AI".</p>
       </footer>
 
     </div>

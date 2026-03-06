@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { projects } from '../data/portfolio';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 import { MediaPlayer } from './MediaPlayer';
 import type { Project } from '../types/portfolio';
 
 export const ProjectShowcase = () => {
+    const { projects } = usePortfolioData();
     const { t } = useTranslation();
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const [initialMediaType, setInitialMediaType] = useState<'video' | 'pdf'>('video');

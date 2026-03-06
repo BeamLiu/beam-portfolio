@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import { personalData } from '../data/portfolio';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 export const HeroSection = () => {
+    const { personalData } = usePortfolioData();
     const { t } = useTranslation();
 
     return (

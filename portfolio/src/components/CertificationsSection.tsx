@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import { certifications } from '../data/portfolio';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 export const CertificationsSection = () => {
+    const { certifications } = usePortfolioData();
     const { t } = useTranslation();
     
     return (

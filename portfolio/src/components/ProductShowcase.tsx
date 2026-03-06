@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { aiShows, geekProjects } from '../data/portfolio';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 import { MediaPlayer } from './MediaPlayer';
 import type { Project } from '../types/portfolio';
 
 export const ProductShowcase = () => {
+    const { aiShows, geekProjects } = usePortfolioData();
     const { t } = useTranslation();
     const allProducts = [...aiShows, ...geekProjects];
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
