@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beam Liu - PLM Expert / Architect</title>
+    <title>刘圣质 - 制造业+AI专家/解决方案架构师</title>
     <style>
         :root {
             --primary-blue: #00a2e8;
@@ -22,7 +22,7 @@
         }
 
         body {
-            font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
             background-color: #e0e0e0;
             color: var(--text-dark);
             line-height: 1.5;
@@ -40,7 +40,7 @@
             position: relative;
         }
 
-        /* Sidebar */
+        /* 左侧侧边栏 */
         .sidebar {
             width: 32%;
             background-color: var(--sidebar-bg);
@@ -73,16 +73,16 @@
         }
 
         .name {
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: 2px;
+            font-size: 30px;
+            font-weight: 500;
+            letter-spacing: 4px;
             margin-bottom: 6px;
         }
 
         .job-title {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 300;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             color: #d0d0d0;
         }
 
@@ -94,20 +94,19 @@
         .sidebar-title {
             background-color: var(--primary-blue);
             color: white;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: bold;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             padding: 6px 10px 6px 30px;
             margin-bottom: 12px;
             margin-left: -5px;
             width: 90%;
-            text-transform: uppercase;
             clip-path: polygon(10px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
         }
 
         .sidebar-content {
             padding: 0 25px;
-            font-size: 12px;
+            font-size: 12.5px;
         }
 
         .info-item {
@@ -117,20 +116,22 @@
         }
 
         .info-item .label {
-            width: 65px;
+            width: 60px;
             flex-shrink: 0;
+            text-align: justify;
+            text-align-last: justify;
+            margin-right: 8px;
             color: #dcdcdc;
-            font-size: 11.5px;
-            font-weight: 600;
+            font-size: 12px;
         }
 
         .info-item .colon {
-            margin-right: 6px;
+            margin-right: 8px;
         }
 
         .info-item .value {
             flex-grow: 1;
-            font-size: 11.5px;
+            font-size: 12px;
             word-break: break-word;
         }
 
@@ -146,7 +147,7 @@
         }
 
         .skill-name {
-            font-size: 11.5px;
+            font-size: 12px;
             width: 45%;
         }
 
@@ -187,20 +188,21 @@
             word-break: break-all;
         }
 
+        /* 语言能力条 */
         .lang-text {
-            font-size: 11.5px;
+            font-size: 12px;
             margin-bottom: 5px;
             color: #ddd;
         }
 
-        /* Main Content */
+        /* 右侧主要内容区 */
         .main-content {
             width: 68%;
             padding: 40px 40px 30px 40px;
         }
 
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
 
         .section-header {
@@ -212,8 +214,8 @@
         }
 
         .section-icon {
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
             background-color: var(--primary-blue);
             border-radius: 50%;
             display: flex;
@@ -224,21 +226,20 @@
         }
 
         .section-icon svg {
-            width: 15px;
-            height: 15px;
+            width: 16px;
+            height: 16px;
             fill: currentColor;
         }
 
         .section-title {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: bold;
             color: var(--text-dark);
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .section-body {
-            font-size: 12.5px;
+            font-size: 13px;
             color: var(--text-gray);
             text-align: justify;
         }
@@ -252,7 +253,7 @@
         .bullet-list li {
             position: relative;
             padding-left: 14px;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
         .bullet-list li::before {
@@ -271,17 +272,16 @@
 
         .history-item {
             display: flex;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
 
         .history-date {
             width: 105px;
             flex-shrink: 0;
             font-family: Arial, sans-serif;
-            font-size: 12px;
+            font-size: 12.5px;
             color: var(--text-dark);
             padding-top: 1px;
-            font-weight: bold;
         }
 
         .history-content {
@@ -291,42 +291,42 @@
         .history-title-row {
             display: flex;
             align-items: center;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
             flex-wrap: wrap;
         }
 
         .history-org {
             font-weight: bold;
-            font-size: 13.5px;
+            font-size: 14px;
             color: var(--text-dark);
-            margin-right: 10px;
+            margin-right: 12px;
         }
 
         .history-role {
             color: var(--primary-blue);
-            font-size: 12.5px;
+            font-size: 13px;
             font-weight: 500;
         }
 
         .history-desc {
-            font-size: 12px;
+            font-size: 12.5px;
         }
 
         .project-item {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
 
         .project-title {
             font-weight: bold;
-            font-size: 13.5px;
+            font-size: 14px;
             color: var(--text-dark);
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         .project-meta {
-            font-size: 12px;
+            font-size: 12.5px;
             color: var(--primary-blue);
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             font-weight: 500;
         }
 
@@ -335,7 +335,7 @@
             border-left: 4px solid var(--primary-blue);
             padding: 10px 15px;
             margin-top: 15px;
-            font-size: 12px;
+            font-size: 12.5px;
             color: #444;
         }
 
@@ -366,75 +366,77 @@
 
 <body>
     <div class="page">
-        <!-- Sidebar -->
+        <!-- 左侧栏 -->
         <div class="sidebar">
             <div class="avatar-container">
-                <img src="./portfolio/public/avatar.jpg" alt="Avatar"
+                <img src="./portfolio/public/avatar.jpg" alt="头像"
                     onerror="this.src='https://via.placeholder.com/130x160?text=Photo'">
             </div>
             <div class="name-wrapper">
-                <div class="name">Beam Liu</div>
-                <div class="job-title">PLM Architect & Expert</div>
+                <div class="name">刘圣质</div>
+                <div class="job-title">数字化+AI专家</div>
             </div>
 
             <div class="sidebar-section">
-                <div class="sidebar-title">Profile Info</div>
+                <div class="sidebar-title">基本信息</div>
                 <div class="sidebar-content">
-                    <div class="info-item"><span class="label">Location</span><span class="colon">:</span><span
-                            class="value">Zhuhai / GZ</span></div>
-                    <div class="info-item"><span class="label">Edu</span><span class="colon">:</span><span
-                            class="value">B.S. Software Eng.</span></div>
-                    <div class="info-item"><span class="label">Uni</span><span class="colon">:</span><span
-                            class="value">Hangzhou Dianzi Uni</span></div>
-                    <div class="info-item"><span class="label">DOB</span><span class="colon">:</span><span
-                            class="value">Oct 1983</span></div>
+                    <div class="info-item"><span class="label">出生年月</span><span class="colon">:</span><span
+                            class="value">1983 / 10</span></div>
+                    <div class="info-item"><span class="label">毕业学校</span><span class="colon">:</span><span
+                            class="value">杭州电子科技大学</span></div>
+                    <div class="info-item"><span class="label">学 历</span><span class="colon">:</span><span
+                            class="value">本科</span></div>
+                    <div class="info-item"><span class="label">专 业</span><span class="colon">:</span><span
+                            class="value">软件工程</span></div>
+                    <div class="info-item"><span class="label">现 居</span><span class="colon">:</span><span
+                            class="value">珠海(可全国)</span></div>
                 </div>
             </div>
 
             <div class="sidebar-section">
-                <div class="sidebar-title">Contact</div>
+                <div class="sidebar-title">联系方式</div>
                 <div class="sidebar-content">
-                    <div class="info-item"><span class="label">Mobile</span><span class="colon">:</span><span
-                            class="value">+86 13924703788</span></div>
-                    <div class="info-item"><span class="label">Email</span><span class="colon">:</span><span
+                    <div class="info-item"><span class="label">手 机</span><span class="colon">:</span><span
+                            class="value">13924703788</span></div>
+                    <div class="info-item"><span class="label">邮 箱</span><span class="colon">:</span><span
                             class="value">beam.liu@gmail.com</span></div>
-                    <div class="info-item"><span class="label">WeChat</span><span class="colon">:</span><span
+                    <div class="info-item"><span class="label">微 信</span><span class="colon">:</span><span
                             class="value">13924703788</span></div>
                 </div>
             </div>
 
             <div class="sidebar-section">
-                <div class="sidebar-title">Competencies</div>
+                <div class="sidebar-title">核心技能</div>
                 <div class="sidebar-content">
                     <ul class="skills-list">
                         <li class="skill-item">
-                            <span class="skill-name">PLM Business Arch</span>
+                            <span class="skill-name">制造业数字化</span>
                             <div class="skill-bar-container">
                                 <div class="skill-bar-fill" style="width: 95%;"></div>
                             </div>
                         </li>
                         <li class="skill-item">
-                            <span class="skill-name">Cloud Native</span>
+                            <span class="skill-name">AI技术落地</span>
                             <div class="skill-bar-container">
                                 <div class="skill-bar-fill" style="width: 90%;"></div>
                             </div>
                         </li>
                         <li class="skill-item">
-                            <span class="skill-name">Solution / Presales</span>
+                            <span class="skill-name">工业互联网</span>
                             <div class="skill-bar-container">
                                 <div class="skill-bar-fill" style="width: 90%;"></div>
                             </div>
                         </li>
                         <li class="skill-item">
-                            <span class="skill-name">Agent / AI</span>
+                            <span class="skill-name">解决方案/售前</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">云原生架构</span>
                             <div class="skill-bar-container">
                                 <div class="skill-bar-fill" style="width: 85%;"></div>
-                            </div>
-                        </li>
-                        <li class="skill-item">
-                            <span class="skill-name">Agile Delivery</span>
-                            <div class="skill-bar-container">
-                                <div class="skill-bar-fill" style="width: 95%;"></div>
                             </div>
                         </li>
                     </ul>
@@ -442,23 +444,24 @@
             </div>
 
             <div class="sidebar-section" style="margin-bottom: 10px;">
-                <div class="sidebar-title">Languages</div>
+                <div class="sidebar-title">语言能力</div>
                 <div class="sidebar-content">
-                    <div class="lang-text"><b>Chinese:</b> Native</div>
-                    <div class="lang-text"><b>English:</b> Fluent working language. Proficient in technical
-                        communication and documentation.</div>
+                    <div class="lang-text">中文: 母语</div>
+                    <div class="lang-text">英文: 可作为工作语言，进行技术交流与全英文文档撰写</div>
                 </div>
             </div>
 
             <div class="qr-section">
                 <div class="qr-code">
-                    <img src="https://api.2dcode.biz/v1/create-qr-code?data=http%3A%2F%2Fbeamliu.emopdata.com%2Fplm" alt="QR Code">
+                    <img src="https://api.2dcode.biz/v1/create-qr-code?data=http%3A%2F%2Fbeamliu.emopdata.com%2Fmfg-ai"
+                        alt="QR Code">
                 </div>
-                <div class="qr-text">Scan for full portfolio & videos</div>
+                <div class="qr-text">扫描查看完整作品集/视频,或拷贝地址</div>
+                <div class="qr-text">http://beamliu.emopdata.com/mfg-ai</div>
             </div>
         </div>
 
-        <!-- Main Content -->
+        <!-- 右侧主要内容 -->
         <div class="main-content">
 
             <div class="section">
@@ -469,17 +472,11 @@
                                 d="M19 3H5C3.89 3 3.01 3.89 3.01 5L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V5C21 3.89 20.11 3 19 3ZM14 17H7V15.5C7 13.17 11.67 12 14 12C16.33 12 21 13.17 21 15.5V17H14ZM14 11C12.34 11 11 9.66 11 8C11 6.34 12.34 5 14 5C15.66 5 17 6.34 17 8C17 9.66 15.66 11 14 11Z" />
                         </svg>
                     </div>
-                    <div class="section-title">Summary</div>
+                    <div class="section-title">个人简介</div>
                 </div>
                 <div class="section-body">
-                    A seasoned industrial software and PLM expert with 19+ years of R&D and architecture experience.
-                    Core leader in independently designing and continuously iterating the EMOP PLM platform (benchmarked
-                    against Siemens Teamcenter). Successfully implemented in top-tier clients like COMAC and Han's
-                    Laser. Profound expertise in core PLM logic (BOM, Engineering Changes, CAD Integration) built over a
-                    Cloud-Native microservices foundation, combined with hands-on capabilities in integrating
-                    state-of-the-art AI/LLM technologies. Experienced in both overcoming low-level technical hurdles and
-                    driving multi-million dollar pre-sales, dedicated to providing next-gen intelligent PLM
-                    transformation solutions.
+                    对制造业数字化链条有较完整的认知和实践，覆盖研发域、制造域和设备层，同时对云、AI、边、端技术有较完整的认知和实践经验。近年在工程实践中引入大模型辅助开发，也在探索 LLM + Agent
+                    在工业设计场景的应用。与西门子和达索系统团队在大量售前售后项目中协作，熟悉先进工业软件优缺点和解决方案。
                 </div>
             </div>
 
@@ -491,22 +488,19 @@
                                 d="M3 13H5V11H3V13ZM3 17H5V15H3V17ZM3 9H5V7H3V9ZM7 13H21V11H7V13ZM7 17H21V15H7V17ZM7 7V9H21V7H7Z" />
                         </svg>
                     </div>
-                    <div class="section-title">Core Competencies (PLM Area)</div>
+                    <div class="section-title">核心竞争力 (数字化+AI 领域)</div>
                 </div>
                 <div class="section-body">
                     <ul class="bullet-list">
-                        <li><b>Profound PLM Architecture Knowledge:</b> Deep understanding of Siemens Teamcenter models.
-                            Mastery of material lifecycle, MCAD/ECAD convergence, polymorphic BOM (EBOM/MBOM), and the
-                            underlying data modeling for engineering changes.</li>
-                        <li><b>Top-tier Manufacturing Implementations:</b> Led projects for mega-enterprises like Han's
-                            Laser and COMAC. Handled challenges involving tens of thousands of parts across vast
-                            cross-organizational supply chains, from pre-sales to delivery.</li>
-                        <li><b>CAD Kernel & Tech Breakthroughs:</b> Deep comprehension of CAD kernels (B-REP) and
-                            independent R&D of lossless 3D format parsing/conversion tools across heterogeneous
-                            environments (UG to CATIA).</li>
-                        <li><b>AI-empowered Industrial Software:</b> Pioneer in utilizing LLMs and Agents. Applied
-                            AI-assisted pair-programming (>80% code generated by AI) achieving 10x development
-                            efficiency.</li>
+                        <li><b>MOM/PLM/IIoT 全链路架构：</b>参与离散制造、流程制造行业数字化，从 BOM/工程变更/工艺 BOP 到设备互联与数据采集，具备端到端系统架构能力，西门子
+                            &amp;
+                            达索团队深度合作。</li>
+                        <li><b>AI 工程化落地：</b>主导 EMOP 3.0 AI 结对编程重构（人工代码占比 &lt;20%），并将机器学习（振动信号分析、模式识别）落地一汽大众、兴森等客户生产环境，非
+                            PPT 方案。</li>
+                        <li><b>自研工业底座产品：</b>主导 EMOP 平台 0→1 构建与持续迭代，两年内实现 3000 万销售额，落地九牧、本田生技、福田汽车等十余家头部客户，持有 12 项发明专利。
+                        </li>
+                        <li><b>千万级项目售前与交付：</b>商飞 C919/CR929 数字化制造、一汽大众 Go Digital IIoT、大族激光集团级 PLM
+                            等标杆项目。</li>
                     </ul>
                 </div>
             </div>
@@ -519,41 +513,38 @@
                                 d="M20 6H16V4C16 2.89 15.11 2 14 2H10C8.89 2 8 2.89 8 4V6H4C2.89 6 2 6.89 2 8V19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V8C22 6.89 21.11 6 20 6ZM10 4H14V6H10V4ZM20 19H4V8H20V19Z" />
                         </svg>
                     </div>
-                    <div class="section-title">Work Experience</div>
+                    <div class="section-title">工作经历</div>
                 </div>
                 <div class="section-body">
-                    <div class="history-item">
-                        <div class="history-date">2017 - Present</div>
+                    <div class="history-item" style="margin-bottom: 12px;">
+                        <div class="history-date">2017.02 - 至今</div>
                         <div class="history-content">
                             <div class="history-title-row">
-                                <div class="history-org">Guangzhou Eingsoft</div>
-                                <div class="history-role">CTO / Co-Founder</div>
+                                <div class="history-org">广州易行数字</div>
+                                <div class="history-role">技术负责人</div>
                             </div>
-                            <div class="history-desc">Chief architect for the EMOP PLM platform. Managed strategic
-                                blueprinting for SOEs and major clients, steering a 100+ team toward a comprehensive
-                                AI-driven development paradigm.</div>
+                            <div class="history-desc">主导自研对标一线软件的工业互联网平台(EMOP)。负责国央企及重点客户项目的落地，带领团队全面转型 AI 智能化研发。
+                            </div>
                         </div>
                     </div>
                     <div class="history-item" style="margin-bottom: 12px;">
-                        <div class="history-date">2010 - 2017</div>
+                        <div class="history-date">2010.05 - 2017.02</div>
                         <div class="history-content">
                             <div class="history-title-row">
-                                <div class="history-org">Dell</div>
-                                <div class="history-role">Software Dev Manager (SDM)</div>
+                                <div class="history-org">戴尔 (Dell)</div>
+                                <div class="history-role">高级软件研发经理</div>
                             </div>
-                            <div class="history-desc">Pioneered microservices architecture for the Foglight platform
-                                (Gartner Magic Quadrant), managing agile R&D groups.</div>
+                            <div class="history-desc">负责 Gartner 魔力象限级产品(Foglight)的平台研发工作，国内早一批微服务实践团队。</div>
                         </div>
                     </div>
                     <div class="history-item" style="margin-bottom: 8px;">
-                        <div class="history-date">2005 - 2010</div>
+                        <div class="history-date">2005.07 - 2010.05</div>
                         <div class="history-content">
                             <div class="history-title-row">
-                                <div class="history-org">OOCL</div>
-                                <div class="history-role">Senior Software Engineer</div>
+                                <div class="history-org">东方海外 (OOCL)</div>
+                                <div class="history-role">高级软件工程师</div>
                             </div>
-                            <div class="history-desc">Core developer for Cargosmart, a top 3 global shipping data
-                                platform. Early adopter of Agile methodologies in China.</div>
+                            <div class="history-desc">参与全球三大船运数据平台 Cargosmart 的研发，国内早一批敏捷开发实践团队。</div>
                         </div>
                     </div>
                 </div>
@@ -567,40 +558,44 @@
                                 d="M20 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H18L22 22V4C22 2.9 21.1 2 20 2ZM20 17.2L18.8 16H4V4H20V17.2Z" />
                         </svg>
                     </div>
-                    <div class="section-title">Core Product</div>
+                    <div class="section-title">AI 创新项目</div>
                 </div>
                 <div class="section-body">
                     <div class="project-item" style="margin-bottom: 8px;">
-                        <div class="project-title">EMOP Industrial Internet Platform (Integrated & Benchmarked against
-                            Siemens Teamcenter)</div>
-                        <div class="project-meta">2017 - Present | Platform Lead & Chief Architect</div>
+                        <div class="project-title">EMOP 3.0 平台端到端构建</div>
+                        <div class="project-meta">2024 - 2025 | 平台负责人</div>
                         <ul class="bullet-list">
-                            <li><b>Product Positioning:</b> Self-developed enterprise-level PLM platform benchmarked
-                                against Siemens Teamcenter, supporting MCAD/ECAD data convergence, polymorphic BOM
-                                management, and full engineering change management.</li>
-                            <li><b>Technical Architecture:</b> Cloud-native microservices architecture supporting
-                                private/public cloud deployment. Provides core services for materials, projects,
-                                documents, changes, and processes, plus extensions like integration, visualization,
-                                intelligent recommendation, and low-code (Mendix) capabilities.</li>
-                            <li><b>Commercial Success:</b> Achieved 30M RMB in sales within two years, successfully
-                                deployed at 10+ top manufacturing clients including JOMOO, Han's Laser, Honda Biotech,
-                                Foton Motors, and Hytera.</li>
-                            <li><b>AI Innovation:</b> Since 2024, completed full-stack 3.0 refactoring using Claude AI
-                                pair programming with <20% human code contribution, achieving 10x+ development
-                                    efficiency.</li>
+                            <li>24年开始 Claude 结对编程完成工业互联网平台的全栈重构，效率 10x 以上，10 个月独立完成平台核心服务的完整重构与稳定迭代，人工代码占比<20%，实现 3.0
+                                    版本完整技术演进。</li>
                         </ul>
                     </div>
-                    <div class="project-item" style="margin-bottom: 12px;">
-                        <div class="project-title">CAD Format Converter & AI-Assisted Design</div>
-                        <div class="project-meta">2025 - Present | Product Owner</div>
+                    <div class="project-item" style="margin-bottom: 8px;">
+                        <div class="project-title">CAD 格式转换工具 (UG → CATIA)</div>
+                        <div class="project-meta">2025 | Developer</div>
                         <ul class="bullet-list">
-                            <li><b>CAD Conversion:</b> AI-assisted heterogeneous CAD format conversion tool (UG →
-                                CATIA), deep dive into CAD kernel B-REP data structures, achieving lossless parsing and
-                                tessellation error control. Completed independently in 3 months.</li>
-                            <li><b>AI-Assisted Design:</b> Exploring AI applications in industrial design through LLM
-                                task decomposition and planning, Agent execution, and small model design completion,
-                                enabling natural language CAD model generation and intelligent design parameter
-                                optimization.</li>
+                            <li>AI 辅助开发的 CAD 文件格式转换工具，深入 CAD 内核 B-REP 数据结构，实现不同设计工具的格式(特征)转换。</li>
+                        </ul>
+                    </div>
+                    <div class="project-item" style="margin-bottom: 8px;">
+                        <div class="project-title">AI 辅助 CAD 设计</div>
+                        <div class="project-meta">2025 - 2026 | Researcher</div>
+                        <ul class="bullet-list">
+                            <li>探索 AI 在工业设计领域的应用，智能化 CAD 设计流程。大模型任务拆解与规划，Agent 执行，小模型设计过程中进行补全。为未来的智能化工业设计提供技术探索和验证。
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-item" style="margin-bottom: 8px;">
+                        <div class="project-title">AI 自动化工艺产品</div>
+                        <div class="project-meta">2022 | Tech Explorer</div>
+                        <ul class="bullet-list">
+                            <li>使用模式识别算法进行 PCB 工艺编制，将传统依赖经验编写耗时超 3 小时的流程，大幅缩减至 1 分钟，工艺路线正确率>98%，并获得专利授权。</li>
+                        </ul>
+                    </div>
+                    <div class="project-item" style="margin-bottom: 10px;">
+                        <div class="project-title">电机类设备预测性维护</div>
+                        <div class="project-meta">2023 | Tech Explorer</div>
+                        <ul class="bullet-list">
+                            <li>基于 ISO 机理模型针对电机类设备通过振动信号进行处理分析，可检测不对中、滚珠磨损等十余种异常场景。并在一汽大众验证部署上线。</li>
                         </ul>
                     </div>
                 </div>
@@ -614,47 +609,38 @@
                                 d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
                         </svg>
                     </div>
-                    <div class="section-title">Key Projects & Achievements</div>
+                    <div class="section-title">代表项目与成果</div>
                 </div>
                 <div class="section-body">
                     <div class="project-item">
-                        <div class="project-title">Hanslaser Group PLM Implementation</div>
-                        <div class="project-meta">2023 | Enterprise Architect & Project Director</div>
+                        <div class="project-title">中国商飞 C919/CR929 数字化制造服务构建</div>
+                        <div class="project-meta">2019 | 项目管理 & 技术架构</div>
                         <ul class="bullet-list">
-                            <li>Solved cross-organizational collaboration across 100+ cost centers and managed 10,000+
-                                custom parts with MCAD/ECAD integration and full material lifecycle management.</li>
-                            <li>Reduced group-level R&D project costs by 20%, material procurement costs by 5%, and
-                                improved design efficiency by 8%.</li>
+                            <li>基于私有云构建物流、质量、计划、AO/FO 及设备等领域服务。</li>
+                            <li>实现民机设备互联与集成，形成商飞机加能力共享及数字采配的标准规范。</li>
                         </ul>
                     </div>
                     <div class="project-item">
-                        <div class="project-title">COMAC C919/CR929 Digital Manufacturing Services</div>
-                        <div class="project-meta">2019 | Project Manager & Tech Architect</div>
+                        <div class="project-title">一汽大众工业互联网平台</div>
+                        <div class="project-meta">2022 | 项目总监 & 技术架构</div>
                         <ul class="bullet-list">
-                            <li>Built private-cloud domain services for logistics, quality, planning, AO/FO, and
-                                equipment, supporting complex machining workflows.</li>
-                            <li>Realized civil aircraft equipment interconnection and integration, establishing standard
-                                specifications for machining capability sharing and digital procurement.</li>
+                            <li>围绕 DTO 数字化转型办公室的 Go Digital 项目，统一基于西门子 MindSphere 构建全厂物联网平台。实现了五地六厂设备数据标准化接入。
+                            </li>
                         </ul>
                     </div>
                     <div class="project-item">
-                        <div class="project-title">Honda (EGCH) R&D & Production Management System</div>
-                        <div class="project-meta">2021 | Tech Architect</div>
+                        <div class="project-title">大族激光集团级 PLM 平台</div>
+                        <div class="project-meta">2023 | 技术架构</div>
                         <ul class="bullet-list">
-                            <li>Built a project management-driven platform connecting PLM data objects, enabling
-                                business and data flow collaboration.</li>
-                            <li>Extended to financial cost management and production planning, creating an end-to-end
-                                R&D-production-finance workflow.</li>
+                            <li>解决上百个项目中心的跨组织协同及四百万级非标件的图纸管理，涵盖 MCAD/ECAD,物料,BOM,变更,项目等全生命周期管理，大幅提升研发效率。</li>
                         </ul>
                     </div>
                     <div class="project-item" style="margin-bottom: 10px;">
-                        <div class="project-title">Fastprint PCB Process Optimization System</div>
-                        <div class="project-meta">2022 | Product Owner & Tech Architect</div>
+                        <div class="project-title">EMOP 工业互联网平台</div>
+                        <div class="project-meta">2017 - 至今 | 平台负责人 & 主架构师</div>
                         <ul class="bullet-list">
-                            <li>Improved PCB design process authoring efficiency through automated rules, reducing time
-                                from 3 hours to 1 minute.</li>
-                            <li>Achieved >98% accuracy in process route generation using pattern recognition algorithms,
-                                with granted invention patent.</li>
+                            <li>自主研发的企业级工业互联网平台，对标西门子 Teamcenter，两年内实现 3000 万销售额，成功落地九牧厨卫、大族激光、本田生技、福田汽车、海能达等十余家头部制造业客户。
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -664,32 +650,27 @@
                 <div class="section-header">
                     <div class="section-icon">
                         <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12 2L4 5V11.09C4 16.14 7.41 20.85 12 22C16.59 20.85 20 16.14 20 11.09V5L12 2ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" />
+                            <path d="M12 2L4 5V11.09C4 16.14 7.41 20.85 12 22C16.59 20.85 20 16.14 20 11.
+09V5L12 2ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" />
                         </svg>
                     </div>
-                    <div class="section-title">Certifications & Patents</div>
+                    <div class="section-title">证书与专利</div>
                 </div>
                 <div class="section-body">
                     <ul class="bullet-list">
-                        <li><b>Google Deep Learning Certification:</b> TensorFlow Deep Learning Developer (2023)</li>
-                        <li><b>Google Cloud ML Certification:</b> Google Cloud Machine Learning Engineer, covering cloud
-                            computing, data processing, traditional ML, and deep learning (2023)</li>
-                        <li><b>Siemens Presales Certification:</b> Presales Engineer for Industrial IoT Solutions (2022)
-                        </li>
-                        <li><b>Dassault Systèmes Support Certification:</b> Technical Support Engineer for PLM Product
-                            Line (2025)</li>
-                        <li><b>Patents:</b> 12 US/CN invention patents covering service-oriented architecture,
-                            intelligent recommendation, process workflow automation, and industrial apps</li>
+                        <li><b>Google 深度学习认证：</b>TensorFlow 深度学习开发者 (2023)</li>
+                        <li><b>Google Cloud 机器学习认证：</b>Google Cloud 机器学习工程师，涵盖云计算、数据处理、传统机器学习、深度学习等内容 (2023)</li>
+                        <li><b>西门子售前认证：</b>工业物联网解决方案售前工程师 (2022)</li>
+                        <li><b>达索系统售后支持认证：</b>产品线技术支持工程师 (2025)</li>
+                        <li><b>发明专利：</b>12 项中美发明专利，涵盖技术架构、工艺、工业 App 等领域</li>
                     </ul>
                 </div>
             </div>
 
             <div class="notice-box">
-                <b>For more exhaustive case studies (e.g., AI CAD, architectural diagrams, demo videos),
-                    visit:</b><br />
-                <a href="http://beamliu.emopdata.com/plm" target="_blank">http://beamliu.emopdata.com/plm</a> or scan
-                the QR code on the left.
+                <b>更多详细项目（含 AI CAD、StyleMidi、各项架构体系图设计及演示视频），请访问：</b><br />
+                <a href="http://beamliu.emopdata.com/mfg-ai" target="_blank">http://beamliu.emopdata.com/mfg-ai</a>
+                或扫描左侧二维码查看。
             </div>
 
         </div>
