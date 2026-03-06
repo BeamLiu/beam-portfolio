@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { usePortfolioData } from '../hooks/usePortfolioData';
+import { useLocation } from 'react-router-dom';
 
 const icons = [
     (
@@ -27,13 +28,21 @@ const icons = [
 export const ValueCards = () => {
     const { t } = useTranslation();
     const { coreCompetencies } = usePortfolioData();
+    const location = useLocation();
+
+    let valuesSubKey = 'sections.valuesSub';
+    if (location.pathname.startsWith('/plm')) {
+        valuesSubKey = 'sections.valuesSub_plm';
+    } else if (location.pathname.startsWith('/geek')) {
+        valuesSubKey = 'sections.valuesSub_geek';
+    }
 
     return (
         <section className="py-24 px-4 bg-background border-t border-border/50">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">{t('sections.values')}</h2>
-                    <p className="text-text-secondary">{t('sections.valuesSub')}</p>
+                    <p className="text-text-secondary">{t(valuesSubKey)}</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -60,7 +60,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ open, setOpen })
                         }}
                         className="flex items-center px-3 py-2 mt-1 text-sm text-text-primary rounded-md cursor-pointer hover:bg-background hover:text-accent transition-colors aria-selected:bg-background aria-selected:text-accent"
                     >
-                        AI Products & Tech Explorations
+                        Products & Tech Explorations
                     </Command.Item>
                     <Command.Item
                         onSelect={() => {

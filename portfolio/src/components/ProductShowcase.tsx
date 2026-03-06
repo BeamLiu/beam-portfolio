@@ -63,7 +63,10 @@ export const ProductShowcase = () => {
                                 {product.role}
                             </p>
 
-                            <p className="text-sm text-text-secondary mb-4 leading-relaxed line-clamp-3">
+                            <p
+                                className="text-sm text-text-secondary mb-4 leading-relaxed line-clamp-3"
+                                title={product.description}
+                            >
                                 {product.description}
                             </p>
 

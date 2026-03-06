@@ -16,7 +16,9 @@ export interface PersonalData {
     patents: string;
     projectsValue: string;
     teamSize: string;
+    [key: string]: string;
   };
+  customMetrics?: Array<{ value: string; label: string }>;
   interests: {
     readingHours: number;
     books: number;
@@ -54,6 +56,14 @@ export interface Project {
     github?: string;
     weblink?: string;
   };
+}
+
+export interface SimpleProject {
+  id: string;
+  name: string;
+  description: string;
+  techStack: string;
+  tags?: string[];
 }
 
 export interface Patent {

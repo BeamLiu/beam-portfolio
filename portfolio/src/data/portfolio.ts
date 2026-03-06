@@ -91,7 +91,7 @@ export const projects_zh: Project[] = [
         id: "c919",
         name: "中国商飞 C919/CR929 MOM & IIoT",
         year: "2019",
-        role: "Project Manager & Architect",
+        role: "项目管理&技术架构",
         description: "基于私有云环境，构建物流、质量、计划、AO、AOSR、FO、设备等领域服务。",
         challenges: "涉及国家机密级别的安全要求；机加车间数采及零配件全流程质量检测的复杂流转。",
         impact: "实现了民机设备互联与集成，形成了商飞机加能力共享及数字采配的标准规范。",
@@ -104,7 +104,7 @@ export const projects_zh: Project[] = [
         id: "vwn",
         name: "一汽大众工业互联网平台",
         year: "2022",
-        role: "Project Director & Architect",
+        role: "项目总监&技术架构",
         description: "围绕 DTO 数字化转型办公室的 Go Digital 项目，统一基于西门子 MindSphere 构建全厂物联网平台。",
         challenges: "五地六厂庞大的设备数据汇集挑战，如何将 180+ 数字化创新场景有效落地为工业 App。",
         impact: "实现了设备数据标准化接入和云端集中管理，推动从传统生产向数字互联智慧生产转变。",
@@ -117,7 +117,7 @@ export const projects_zh: Project[] = [
         id: "hanslaser",
         name: "大族激光 PLM 平台",
         year: "2023",
-        role: "Architect & Consultant",
+        role: "技术架构",
         description: "解决集团百个成本中心的组织结构协同以及设备全生命周期物料管理。",
         challenges: "产线超过上万个零件管理复杂度；长周期物料呆滞问题；百个项目中心使用。",
         impact: "集团级研发项目成本管控降低 20%，物料采购成本降低 5%，设计效率提升 8%。",
@@ -134,7 +134,7 @@ export const aiShows_zh: Project[] = [
         name: "EMOP 3.0 平台端到端构建",
         year: "2024年-2025年",
         role: "平台负责人",
-        description: "24年开始Claude结对编程完成工业互联网平台的全栈重构，效率10x以上，10个月独立完成平台核心服务的完整重构与稳定迭代。",
+        description: "24年开始Claude结对编程完成工业互联网平台(对标TC)的全栈重构，效率10x以上，10个月独立完成平台核心服务的完整重构与稳定迭代。",
         challenges: "前后端架构全面升级，AI 辅助代码重构和优化，完整的售前材料和演示视频制作，云原生微服务架构设计。",
         impact: "实现了从 1.0 到 3.0 的完整技术演进，大幅提升了平台的可扩展性和稳定性，为千万级项目落地提供了坚实的技术底座。",
         tags: ["人类代码率<20%", "代码全审查", "对标TC平台"],
@@ -205,6 +205,19 @@ export const aiShows_zh: Project[] = [
             ],
             github: "https://github.com/BeamLiu/codesnippet/tree/main/build_llm/style_midi",
             weblink: "http://8.134.38.136/stylemidi/"
+        }
+    },
+    {
+        id: "ai-process",
+        name: "AI 自动化工艺产品",
+        year: "2022年",
+        role: "Tech Explorer",
+        description: "使用模式识别算法进行PCB工艺编制，将传统依赖工程师经验编写耗时超3小时的流程，大幅缩减至1分钟，自动生成的工艺路线正确率>98%，并获得专利授权。",
+        challenges: "将确定性的工程规则与概率性大模型结合，解构非结构化规则，保证工艺节点生成 100% 准确性。",
+        impact: "为企业工艺工程师极大地减轻了规则编写工作量，降低了工艺流转错误率，在 PCB 制造流程中验证了极致的效率跃升。",
+        tags: ["工艺优化", "专利授权", "模式识别"],
+        media: {
+            image: "/images/pcb.png"
         }
     },
     {
@@ -510,6 +523,19 @@ export const aiShows_en: Project[] = [
             ],
             github: "https://github.com/BeamLiu/codesnippet/tree/main/build_llm/style_midi",
             weblink: "http://8.134.38.136/stylemidi/"
+        }
+    },
+    {
+        id: "ai-process",
+        name: "AI Automated Process App",
+        year: "2022",
+        role: "Product Owner & Architect",
+        description: "Developed an AI-automated PCB process planning. Transformed traditional manual rule authoring (averaging 3 hours) into an automated generation flow taking around 1 minute.",
+        challenges: "Integrating deterministic engineering rules with probabilistic LLM generation, structuring unstructured rules into actionable workflows, and ensuring 100% accuracy in critical process steps.",
+        impact: "Reduced process engineers' workload drastically, decreased error rates, and achieved an extreme efficiency boost for PCB manufacturing workflows.",
+        tags: ["PCB Manufacturing", "Pattern Recognition"],
+        media: {
+            image: "/images/pcb.png"
         }
     },
     {

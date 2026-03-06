@@ -35,22 +35,33 @@ export const HeroSection = () => {
 
                 {/* Metrics Banner */}
                 <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 pt-8 border-t border-border w-full">
-                    <div className="flex flex-col items-center">
-                        <span className="text-4xl font-bold text-accent mb-2">{personalData.metrics.yearsOfExperience}</span>
-                        <span className="text-sm text-text-secondary uppercase tracking-wider">{t('hero.yearsExp')}</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <span className="text-4xl font-bold text-accent mb-2">{personalData.metrics.patents}</span>
-                        <span className="text-sm text-text-secondary uppercase tracking-wider">{t('hero.patents')}</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <span className="text-4xl font-bold text-accent mb-2">{personalData.metrics.projectsValue}</span>
-                        <span className="text-sm text-text-secondary uppercase tracking-wider">{t('hero.volume')}</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <span className="text-4xl font-bold text-accent mb-2">{personalData.metrics.teamSize}</span>
-                        <span className="text-sm text-text-secondary uppercase tracking-wider">{t('hero.team')}</span>
-                    </div>
+                    {personalData.customMetrics ? (
+                        personalData.customMetrics.map((item, idx) => (
+                            <div key={idx} className="flex flex-col items-center text-center">
+                                <span className="text-4xl font-bold text-accent mb-2">{item.value}</span>
+                                <span className="text-sm text-text-secondary uppercase tracking-wider whitespace-pre-line leading-relaxed">{item.label}</span>
+                            </div>
+                        ))
+                    ) : (
+                        <>
+                            <div className="flex flex-col items-center text-center">
+                                <span className="text-4xl font-bold text-accent mb-2">{personalData.metrics.yearsOfExperience}</span>
+                                <span className="text-sm text-text-secondary uppercase tracking-wider">{t('hero.yearsExp')}</span>
+                            </div>
+                            <div className="flex flex-col items-center text-center">
+                                <span className="text-4xl font-bold text-accent mb-2">{personalData.metrics.patents}</span>
+                                <span className="text-sm text-text-secondary uppercase tracking-wider">{t('hero.patents')}</span>
+                            </div>
+                            <div className="flex flex-col items-center text-center">
+                                <span className="text-4xl font-bold text-accent mb-2">{personalData.metrics.projectsValue}</span>
+                                <span className="text-sm text-text-secondary uppercase tracking-wider">{t('hero.volume')}</span>
+                            </div>
+                            <div className="flex flex-col items-center text-center">
+                                <span className="text-4xl font-bold text-accent mb-2">{personalData.metrics.teamSize}</span>
+                                <span className="text-sm text-text-secondary uppercase tracking-wider">{t('hero.team')}</span>
+                            </div>
+                        </>
+                    )}
                 </div>
 
                 {/* Quick Links / Contact */}

@@ -9,6 +9,7 @@ import { PatentsTable } from './components/PatentsTable';
 import { CertificationsSection } from './components/CertificationsSection';
 import { TechRadar } from './components/TechRadar';
 import { CommandPalette } from './components/CommandPalette';
+import { SimpleProjectShowcase } from './components/SimpleProjectShowcase';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -58,6 +59,8 @@ function App() {
           <ProjectShowcase />
         </div>
 
+        <SimpleProjectShowcase />
+
         <div id="career">
           <CareerTrajectory />
         </div>
@@ -80,7 +83,7 @@ function App() {
           <div className="text-accent/60 mb-2">user@beam-portfolio:~$ cat whoami.txt</div>
           <div className="text-text-primary font-medium">&gt; CTO, AI Explorer, Presales Expert.</div>
         </div>
-        <p className="text-sm text-text-secondary/60">© {new Date().getFullYear()} LiuShengZhi(Beam Liu) Portfolio. Designed for "Manufacturing + AI".</p>
+        <p className="text-sm text-text-secondary/60">© {new Date().getFullYear()} LiuShengZhi(Beam Liu) Portfolio. Designed for {window.location.pathname.includes('plm') ? '"PLM + AI"' : window.location.pathname.includes('geek') ? '"Pure AI & Agentic"' : '"Manufacturing + AI"'}.</p>
       </footer>
 
     </div>
