@@ -1,9 +1,8 @@
 import type { CoreCompetency } from '../portfolio';
-import type { SimpleProject } from '../../types/portfolio';
 
 export const mfgAiOverrides = {
     personalData_zh: {
-        title: "MFG+AI Expert, Solution Architect",
+        title: "Digitalization+AI Expert, Solution Architect",
         slogan: "融合制造业与 AI 技术的数字化转型专家",
         metrics: {
             yearsOfExperience: "19+",
@@ -30,7 +29,7 @@ export const mfgAiOverrides = {
         customMetrics: [
             { value: "19+", label: "Years in\nMFG Digital" },
             { value: "12", label: "Core Tech\nPatents" },
-            { value: "30M+", label: "MFG Project\nRevenue" },
+            { value: "30M+", label: "MFG Product\nRevenue" },
             { value: "70+", label: "Agile\nEngineers" }
         ]
     },
