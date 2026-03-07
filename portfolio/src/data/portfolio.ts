@@ -653,7 +653,7 @@ export const coreCompetencies_zh: CoreCompetency[] = [
     },
     {
         title: "售前与商业转化",
-        desc: "西门子、达索工业软件领域售前售后认证，懂技术更懂客户，1 小时拿下 700 万订单。"
+        desc: "长期与西门子、达索等工业巨头团队合作售前售后，持有相关认证，精准把握客户痛点。"
     },
     {
         title: "敏捷团队AI化",

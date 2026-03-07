@@ -13,6 +13,7 @@ import {
 } from '../data/portfolio';
 import { plmOverrides } from '../data/variants/plm';
 import { geekOverrides } from '../data/variants/geek';
+import { mfgAiOverrides } from '../data/variants/mfg-ai';
 import type { PersonalData, Project, Patent, Experience, Certification, SimpleProject } from '../types/portfolio';
 import type { CoreCompetency } from '../data/portfolio';
 
@@ -57,7 +58,13 @@ export const usePortfolioData = (): PortfolioData => {
     let overrides: any = null;
     let pageTitle = isEn ? "Beam Liu - AI Explorer & Industrial Digitalization Expert" : "刘圣质 (Beam Liu) - AI 探索者 & 工业数字化专家";
 
-    if (location.pathname.startsWith('/plm')) {
+    if (location.pathname.startsWith('/mfg-ai')) {
+        overrides = {
+            personalData: isEn ? mfgAiOverrides.personalData_en : mfgAiOverrides.personalData_zh,
+            coreCompetencies: isEn ? mfgAiOverrides.coreCompetencies_en : mfgAiOverrides.coreCompetencies_zh,
+        };
+        pageTitle = isEn ? "Beam Liu - MFG+AI Expert & Solution Architect" : "刘圣质 (Beam Liu) - 制造业+AI 专家 & 解决方案架构师";
+    } else if (location.pathname.startsWith('/plm')) {
         overrides = {
             personalData: isEn ? plmOverrides.personalData_en : plmOverrides.personalData_zh,
             coreCompetencies: isEn ? plmOverrides.coreCompetencies_en : plmOverrides.coreCompetencies_zh,
