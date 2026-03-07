@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刘圣质 - PLM专家/架构师</title>
+    <style>
+        :root {
+            --primary-blue: #00a2e8;
+            --sidebar-bg: #5f5f5f;
+            --text-dark: #333333;
+            --text-gray: #555555;
+            --text-light: #ffffff;
+            --border-color: #222222;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #e0e0e0;
+            color: var(--text-dark);
+            line-height: 1.5;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 40px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            position: relative;
+        }
+
+        /* 左侧侧边栏 */
+        .sidebar {
+            width: 32%;
+            background-color: var(--sidebar-bg);
+            color: var(--text-light);
+            padding: 30px 0 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .avatar-container {
+            width: 110px;
+            height: 140px;
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name-wrapper {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .name {
+            font-size: 30px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            margin-bottom: 6px;
+        }
+
+        .job-title {
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            color: #d0d0d0;
+        }
+
+        .sidebar-section {
+            width: 100%;
+            margin-bottom: 18px;
+        }
+
+        .sidebar-title {
+            background-color: var(--primary-blue);
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: 6px 10px 6px 30px;
+            margin-bottom: 12px;
+            margin-left: -5px;
+            width: 90%;
+            clip-path: polygon(10px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
+        }
+
+        .sidebar-content {
+            padding: 0 25px;
+            font-size: 12.5px;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 6px;
+            align-items: flex-start;
+        }
+
+        .info-item .label {
+            width: 60px;
+            flex-shrink: 0;
+            text-align: justify;
+            text-align-last: justify;
+            margin-right: 8px;
+            color: #dcdcdc;
+            font-size: 12px;
+        }
+
+        .info-item .colon {
+            margin-right: 8px;
+        }
+
+        .info-item .value {
+            flex-grow: 1;
+            font-size: 12px;
+            word-break: break-word;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skill-item {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .skill-name {
+            font-size: 12px;
+            width: 45%;
+        }
+
+        .skill-bar-container {
+            width: 50%;
+            height: 6px;
+            background-color: #777;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            background-color: var(--primary-blue);
+        }
+
+        .qr-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 0 25px;
+        }
+
+        .qr-code {
+            width: 100px;
+            height: 100px;
+            background: white;
+            padding: 5px;
+            margin: 0 auto 10px auto;
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .qr-text {
+            font-size: 11px;
+            color: #ccc;
+            line-height: 1.4;
+            word-break: break-all;
+        }
+
+        /* 语言能力条 */
+        .lang-text {
+            font-size: 12px;
+            margin-bottom: 5px;
+            color: #ddd;
+        }
+
+        /* 右侧主要内容区 */
+        .main-content {
+            width: 68%;
+            padding: 40px 40px 30px 40px;
+        }
+
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+
+        .section-icon {
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-right: 12px;
+        }
+
+        .section-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .section-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: var(--text-dark);
+            letter-spacing: 1px;
+        }
+
+        .section-body {
+            font-size: 13px;
+            color: var(--text-gray);
+            text-align: justify;
+        }
+
+        .bullet-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 6px;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 6px;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0px;
+            font-size: 16px;
+            color: var(--primary-blue);
+        }
+
+        .bullet-list li b,
+        .bullet-list li strong {
+            color: #222;
+        }
+
+        .history-item {
+            display: flex;
+            margin-bottom: 16px;
+        }
+
+        .history-date {
+            width: 105px;
+            flex-shrink: 0;
+            font-family: Arial, sans-serif;
+            font-size: 12.5px;
+            color: var(--text-dark);
+            padding-top: 1px;
+        }
+
+        .history-content {
+            flex-grow: 1;
+        }
+
+        .history-title-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+            flex-wrap: wrap;
+        }
+
+        .history-org {
+            font-weight: bold;
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-right: 12px;
+        }
+
+        .history-role {
+            color: var(--primary-blue);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .history-desc {
+            font-size: 12.5px;
+        }
+
+        .project-item {
+            margin-bottom: 16px;
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 3px;
+        }
+
+        .project-meta {
+            font-size: 12.5px;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .notice-box {
+            background: #f4f9fc;
+            border-left: 4px solid var(--primary-blue);
+            padding: 10px 15px;
+            margin-top: 15px;
+            font-size: 12.5px;
+            color: #444;
+        }
+
+        .notice-box a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 210mm;
+                min-height: 297mm;
+            }
+
+            .page {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- 左侧栏 -->
+        <div class="sidebar">
+            <div class="avatar-container">
+                <img src="./portfolio/public/avatar.jpg" alt="头像"
+                    onerror="this.src='https://via.placeholder.com/130x160?text=Photo'">
+            </div>
+            <div class="name-wrapper">
+                <div class="name">刘圣质</div>
+                <div class="job-title">PLM 架构师 / 专家</div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">基本信息</div>
+                <div class="sidebar-content">
+                    <div class="info-item"><span class="label">出生年月</span><span class="colon">:</span><span
+                            class="value">1983 / 10</span></div>
+                    <div class="info-item"><span class="label">毕业学校</span><span class="colon">:</span><span
+                            class="value">杭州电子科技大学</span></div>
+                    <div class="info-item"><span class="label">学 历</span><span class="colon">:</span><span
+                            class="value">本科</span></div>
+                    <div class="info-item"><span class="label">专 业</span><span class="colon">:</span><span
+                            class="value">软件工程</span></div>
+                    <div class="info-item"><span class="label">现 居</span><span class="colon">:</span><span
+                            class="value">珠海</span></div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">联系方式</div>
+                <div class="sidebar-content">
+                    <div class="info-item"><span class="label">手 机</span><span class="colon">:</span><span
+                            class="value">13924703788</span></div>
+                    <div class="info-item"><span class="label">邮 箱</span><span class="colon">:</span><span
+                            class="value">beam.liu@gmail.com</span></div>
+                    <div class="info-item"><span class="label">微 信</span><span class="colon">:</span><span
+                            class="value">13924703788</span></div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">核心技能</div>
+                <div class="sidebar-content">
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <span class="skill-name">PLM业务架构</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 95%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">云原生</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">解决方案/售前</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">Agent/AI</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 85%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">敏捷业务落地</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 95%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-section" style="margin-bottom: 10px;">
+                <div class="sidebar-title">语言能力</div>
+                <div class="sidebar-content">
+                    <div class="lang-text">中文: 母语</div>
+                    <div class="lang-text">英文: 可作为工作语言，进行技术交流与全英文文档撰写</div>
+                </div>
+            </div>
+
+            <div class="qr-section">
+                <div class="qr-code">
+                    <img src="plm-qr.png" alt="QR Code">
+                </div>
+                <div class="qr-text">扫描查看完整作品集/视频</div>
+            </div>
+        </div>
+
+        <!-- 右侧主要内容 -->
+        <div class="main-content">
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5C3.89 3 3.01 3.89 3.01 5L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V5C21 3.89 20.11 3 19 3ZM14 17H7V15.5C7 13.17 11.67 12 14 12C16.33 12 21 13.17 21 15.5V17H14ZM14 11C12.34 11 11 9.66 11 8C11 6.34 12.34 5 14 5C15.66 5 17 6.34 17 8C17 9.66 15.66 11 14 11Z" />
+                        </svg>
+                    </div>
+                    <div class="section-title">个人简介</div>
+                </div>
+                <div class="section-body">
+                    熟悉Siemens Teamcenter和达索3DE，主导从 0 到 1 自主研发并持续迭代对标 Teamcenter 的大型 PLM 平台
+                    (EMOP1.0-3.0)，在九牧、本田生技、大族激光等头部客户中成功落地。熟悉 PLM 核心业务逻辑（CAD集成、物料、BOM 架构、工程变更、BOP等）与云原生微服务底座设计，具备将 AI
+                    大模型技术与底层相融合的实战能力。既能攻克底层技术难关，又拥有千万级企业项目的售前打单与交付落地能力，致力于为复杂制造业提供下一代智能化的 PLM 转型方案。
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M3 13H5V11H3V13ZM3 17H5V15H3V17ZM3 9H5V7H3V9ZM7 13H21V11H7V13ZM7 17H21V15H7V17ZM7 7V9H21V7H7Z" />
+                        </svg>
+                    </div>
+                    <div class="section-title">核心竞争力 (PLM 领域)</div>
+                </div>
+                <div class="section-body">
+                    <ul class="bullet-list">
+                        <li><b>深厚的 PLM 架构与业务功底：</b>深入剖析并对标西门子 Teamcenter 架构。掌握物料全生命周期、MCAD/ECAD 数据互通、多态 BOM
+                            (EBOM/MBOM) 管理、工程变更的底层数据模型，理解IPD, APQP等行业相关业务流程。</li>
+                        <li><b>大型制造业标杆级落地经验：</b>操盘大族激光、中国商飞等千万级客户项目。具备售前到交付的端到端经验。</li>
+                        <li><b>CAD 内核与底层技术攻坚：</b>深入理解 CAD 内核数据结构 (B-REP)，独立研发 UG 至 CATIA 等异构 CAD 系统的格式(包含特征)转换及解析工具。
+                        </li>
+                        <li><b>AI 赋能下一代工业软件：</b>实践 AI 辅助EMOP全栈重构（AI编码超80%，研发效能提升超 10 倍 ），探索智能 CAD 设计等前沿应用。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20 6H16V4C16 2.89 15.11 2 14 2H10C8.89 2 8 2.89 8 4V6H4C2.89 6 2 6.89 2 8V19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V8C22 6.89 21.11 6 20 6ZM10 4H14V6H10V4ZM20 19H4V8H20V19Z" />
+                        </svg>
+                    </div>
+                    <div class="section-title">工作经历</div>
+                </div>
+                <div class="section-body">
+                    <div class="history-item" style="margin-bottom: 12px;">
+                        <div class="history-date">2017.02 - 至今</div>
+                        <div class="history-content">
+                            <div class="history-title-row">
+                                <div class="history-org">广州易行数字</div>
+                                <div class="history-role">技术负责人</div>
+                            </div>
+                            <div class="history-desc">主导自研对标一线软件的 PLM 平台(EMOP)。负责国央企及重点客户项目的落地，带领团队全面转型 AI 智能化研发。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-item" style="margin-bottom: 12px;">
+                        <div class="history-date">2010.05 - 2017.02</div>
+                        <div class="history-content">
+                            <div class="history-title-row">
+                                <div class="history-org">戴尔 (Dell)</div>
+                                <div class="history-role">高级软件研发经理</div>
+                            </div>
+                            <div class="history-desc">负责 Gartner 魔力象限级产品(Foglight)的平台研发工作，国内早一批微服务实践团队。</div>
+                        </div>
+                    </div>
+                    <div class="history-item" style="margin-bottom: 8px;">
+                        <div class="history-date">2005.07 - 2010.05</div>
+                        <div class="history-content">
+                            <div class="history-title-row">
+                                <div class="history-org">东方海外 (OOCL)</div>
+                                <div class="history-role">高级软件工程师</div>
+                            </div>
+                            <div class="history-desc">参与全球三大船运数据平台 Cargosmart 的研发，国内早一批敏捷开发实践团队。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H18L22 22V4C22 2.9 21.1 2 20 2ZM20 17.2L18.8 16H4V4H20V17.2Z" />
+                        </svg>
+                    </div>
+                    <div class="section-title">核心产品</div>
+                </div>
+                <div class="section-body">
+                    <div class="project-item" style="margin-bottom: 8px;">
+                        <div class="project-title">EMOP 工业互联网平台 (融合到对标 Siemens Teamcenter)</div>
+                        <div class="project-meta">2017 - 至今 | 平台负责人 & 主架构师</div>
+                        <ul class="bullet-list">
+                            <li><b>产品定位：</b>自主研发的企业级 PLM 平台，对标西门子 Teamcenter，支持 MCAD/ECAD 数据融合、多态 BOM 管理（工程变更全流程管理。</li>
+                            <li><b>技术架构：</b>云原生微服务架构，支持私有云/公有云部署，提供物料、项目、文档、变更、工艺等核心服务，以及易联（集成）、易观（可视化）、易算（智能推荐）、易搭（Mendix低代码）等扩展能力。
+                            </li>
+                            <li><b>商业成果：</b>两年内实现 3000 万销售额，成功落地九牧厨卫、大族激光、本田生技、福田汽车、海能达等十余家头部制造业客户。</li>
+                            <li><b>AI 创新：</b>2024 年起采用 Claude AI 结对编程完成 3.0 版本全栈重构，人工代码占比<20%，研发效率提升 10 倍以上。</li>
+                        </ul>
+                    </div>
+                    <div class="project-item" style="margin-bottom: 12px;">
+                        <div class="project-title">CAD 格式转换工具及 AI 辅助设计</div>
+                        <div class="project-meta">2025 - 至今 | 负责人</div>
+                        <ul class="bullet-list">
+                            <li><b>CAD 转换：</b>AI 辅助开发的异构 CAD 格式转换工具（UG → CATIA），深入 CAD 内核 B-REP 数据结构，实现无损解析与面片化误差控制，3
+                                个月独立完成。</li>
+                            <li><b>AI 辅助设计：</b>探索 AI 在工业设计领域的应用，通过大模型任务拆解与规划、Agent 执行、小模型设计补全，实现自然语言生成 CAD 模型和设计参数智能优化。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
+                        </svg>
+                    </div>
+                    <div class="section-title">代表项目与成果</div>
+                </div>
+                <div class="section-body">
+                    <div class="project-item">
+                        <div class="project-title">大族激光集团级 PLM 平台</div>
+                        <div class="project-meta">2023 | 技术架构</div>
+                        <ul class="bullet-list">
+                            <li>解决上百个成本中心的跨组织协同及万级非标件的图纸管理，涵盖 MCAD/ECAD 及物料全生命周期流转。</li>
+                            <li>集团级研发项目成本管控降低 20%，物料采购成本降低 5%，设计效率提升 8%。</li>
+                        </ul>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-title">中国商飞 C919/CR929 数字化制造服务构建</div>
+                        <div class="project-meta">2019 | 项目管理 & 技术架构</div>
+                        <ul class="bullet-list">
+                            <li>基于私有云构建物流、质量、计划、AO/FO 及设备等领域服务，支持机加工极其复杂的流转。</li>
+                            <li>实现民机设备互联与集成，形成商飞机加能力共享及数字采配的标准规范。</li>
+                        </ul>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-title">本田汽车(EGCH)研发生产管理系统</div>
+                        <div class="project-meta">2021 | 技术架构</div>
+                        <ul class="bullet-list">
+                            <li>搭建以项目管理为业务承载的平台，串联 PLM 系统内数据对象，实现业务流和数据流的协作。</li>
+                            <li>延伸至财务端的成本管理与生产端的计划管理，打通研发-生产-财务全链路。</li>
+                        </ul>
+                    </div>
+                    <div class="project-item" style="margin-bottom: 10px;">
+                        <div class="project-title">兴森快捷生产工艺优化系统</div>
+                        <div class="project-meta">2022 | 技术架构</div>
+                        <ul class="bullet-list">
+                            <li>通过自动化规则提升 PCB 设计的工艺编写效率，将编写耗时从平均 3 小时降到 1 分钟。</li>
+                            <li>基于模式识别算法，工艺路线生成正确率>98%，并获得发明专利授权。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2L4 5V11.09C4 16.14 7.41 20.85 12 22C16.59 20.85 20 16.14 20 11.09V5L12 2ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" />
+                        </svg>
+                    </div>
+                    <div class="section-title">证书与专利</div>
+                </div>
+                <div class="section-body">
+                    <ul class="bullet-list">
+                        <li><b>Google 深度学习认证：</b>TensorFlow 深度学习开发者 (2023)</li>
+                        <li><b>Google Cloud 机器学认证：</b>Google Cloud 机器学习工程师，涵盖云计算、数据处理、传统机器学习、深度学习等内容 (2023)</li>
+                        <li><b>西门子售前认证：</b>工业物联网解决方案售前工程师 (2022)</li>
+                        <li><b>达索系统售后支持认证：</b>产品线技术支持工程师 (2025)</li>
+                        <li><b>发明专利：</b>12 项中美发明专利，涵盖服务化架构、智能推荐、工艺流程自动化、工业 App 等领域</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="notice-box">
+                <b>更多详细项目（含 AI CAD、StyleMidi、各项架构体系图设计及演示视频），请访问：</b><br />
+                <a href="http://beamliu.emopdata.com/plm" target="_blank">http://beamliu.emopdata.com/plm</a>
+                或扫描左侧二维码查看。
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
